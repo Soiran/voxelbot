@@ -1,0 +1,41 @@
+{
+  "name": "voxelbot",
+  "version": "1.0.0",
+  "description": "Discord bot for Voxel Hub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soiran/voxelbot.git"
+  },
+  "author": "Voxel Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Soiran/voxelbot/issues"
+  },
+  "homepage": "https://github.com/Soiran/voxelbot#readme",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@types/node": "^7.0.5",
+    "colors": "^1.4.0",
+    "discord.js": "^12.5.1",
+    "fs": "^0.0.1-security",
+    "stringifier": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.11",
+    "@types/node": "^14.14.21"
+  },
+  "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ],
+    "moduleResolution": "node"
+  }
+}
