@@ -1,3 +1,26 @@
 {
-    "token": "ODAwNjc1MjQxMjQ3NzY4NTg2.YAVk7Q.jUVcmR6EvvEsPOOo_8qGSrUx_wI"
+    "token": "ODAwNjc1MjQxMjQ3NzY4NTg2.YAVk7Q.jUVcmR6EvvEsPOOo_8qGSrUx_wI",
+    "guildId": "799935842721726494",
+    "permissionsCodex": {
+        "create": [
+            "embed"
+        ],
+        "show": [
+            "ownProfile",
+            "otherProfile"
+        ],
+        "chat": [
+            "roll"
+        ]
+    },
+    "defaultPermissions": [
+        "chat.roll",
+        "show.ownProfile"
+    ],
+    "items": {
+        "badges.alpha": {
+            "emoji": ":items.badges.alpha:",
+            "alias": "Альфа-участник"
+        }
+    }
 }
