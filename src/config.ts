@@ -1,10 +1,6 @@
-/**
- * Объект конфигурации используется для глобальной настройки бота.
- */
-import * as fs from "fs";
+import * as fs from 'fs';
+import { Config } from './interfaces/config';
+import { Data } from './utils/data';
 
 
-interface Config {
-    token: string
-};
-export const config: Config = JSON.parse(fs.readFileSync('../config.json').toString());
+export const config : Config = JSON.parse(fs.readFileSync('./config.json').toString());
