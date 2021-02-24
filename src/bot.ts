@@ -3,7 +3,7 @@ import { getRoles } from './controllers/api/roles';
 import { client } from './client';
 import { sessionUsers } from './session';
 import * as usersController from './controllers/users';
-import { User } from './classes/user';
+import { User } from './types/user';
 import { Logger } from './utils/cl';
 import { commands } from './commands';
 
@@ -17,6 +17,10 @@ client.on('ready', () => {
 
 client.on('message', async msg => {
     if (msg.author.bot) return;
+    console.log(msg);
+    if (msg.channel.type === 'dm') {
+        return msg.channel.send('Команды бота работают только на сервере.');
+    }
     if (!sessionUsers[msg.author.id]) {
         await usersController.registrateUser({
             id: msg.member.id,
@@ -27,14 +31,14 @@ client.on('message', async msg => {
     }
     let user: User = sessionUsers[msg.author.id];
     if (!user.stage) {
-        commands.forEach(cmd => {
-            if (!cmd.matches(msg.content)) return;
+        for (let cmd of commands) {
+            if (!cmd.matches(msg.content)) continue;
             if (!cmd.allowed(user)) {
                 msg.channel.send('У вас нет прав на использование данной команды.');
             } else {
-                cmd.use(msg);
+                await cmd.use(msg, user);
             }
-        });
+        }
     }
     for (let id in sessionUsers) {
         sessionUsers[id].update();
