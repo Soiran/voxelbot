@@ -1,5 +1,5 @@
-import { User } from '../classes/user';
-import { UserData } from '../interfaces/userData';
+import { User } from '../types/user';
+import { UserData } from '../types/userData';
 import { usersDatabase } from '../connections/users';
 import { sessionUsers } from '../session';
 
