@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { Config } from './interfaces/config';
+import { Config } from './types/config';
 import { Data } from './utils/data';
 
 
