@@ -2,7 +2,7 @@
     "token": "ODAwNjc1MjQxMjQ3NzY4NTg2.YAVk7Q.jUVcmR6EvvEsPOOo_8qGSrUx_wI",
     "guildId": "799935842721726494",
     "permissionsCodex": {
-        "create": [
+        "tools": [
             "embed"
         ],
         "show": [
@@ -11,6 +11,28 @@
         ],
         "chat": [
             "roll"
+        ],
+        "flags": [
+            "delete",
+            "hide",
+            "pin",
+            "channel",
+            "dm",
+            "tag",
+            "edit"
+        ],
+        "permissions": [
+            "set",
+            "clear",
+            "add",
+            "remove"
+        ],
+        "info": [
+            "flags",
+            "tags",
+            "permissionsCodex",
+            "userPermissions",
+            "rolePermissions"
         ]
     },
     "defaultPermissions": [
