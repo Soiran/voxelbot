@@ -47,7 +47,7 @@ export class Data {
                 if (typeof target == 'object' && !(target instanceof Array)) {
                     if (target[f] == undefined) {
                         if (target instanceof Object) {
-                            target[f] = true;
+                            target[f] = {};
                         }
                     }
                     target = target[f];
