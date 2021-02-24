@@ -1,9 +1,8 @@
 import { Collection, Role, Guild } from 'discord.js';
-import { getGuild } from './guild';
-import { client } from '../../client';
+import { getMember } from './members';
 
 
 export async function getRoles(guild: Guild, memberId: string) : Promise<Collection<string, Role>> {
-    let member = await guild.members.fetch(memberId);
+    let member = await getMember(memberId, guild);
     return member.roles.cache;
 }

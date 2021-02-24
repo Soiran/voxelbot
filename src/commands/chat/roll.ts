@@ -1,10 +1,12 @@
 import { Message } from 'discord.js';
-import { Permissions } from '../../classes/permissions';
-import { Command } from '../../classes/command';
-import { client } from '../../client';
+import { Permissions } from '../../types/permissions';
+import { Command, CommandContext } from '../../types/command';
 
 
-export default new Command(/^ролл/gi, new Permissions('chat.roll'), (msg: Message) => {
+export default new Command({
+    prefixes: ['!', ''],
+    aliases: ['ролл', 'roll']
+}, new Permissions('chat.roll'), async (msg: Message, context: CommandContext) => {
     let rolled = Math.round(Math.random() * 100);
-    msg.channel.send(rolled);
+    return [ rolled ];
 })
